@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="BoxMesh" id=1]
+size = Vector3( 0.2, 0.2, 0.2 )
+
+[node name="RandomTransformNode" type="RandomTransformNode"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.15202, 3.57336, 6.55899 )
+script = null
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+script = null

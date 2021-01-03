@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SphereMesh" id=1]
+radius = 0.1
+height = 0.2
+radial_segments = 8
+rings = 8
+
+[node name="Debris" type="Entity"]
+__component_data = {
+@"TransformComponent": {
+@"mesh": SubResource( 1 )
+},
+@"Debris": {
+}
+}
+script = null

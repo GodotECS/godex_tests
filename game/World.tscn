@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://World.gd" type="Script" id=1]
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+background_color = Color( 0.580392, 0.870588, 1, 1 )
+
+[sub_resource type="PipelineECS" id=2]
+pipeline_name = @"Default"
+systems_name = [ @"RandomTeleport", @"DebrisSystem", @"ScenarioManagerSystem", @"MeshUpdaterSystem", @"MeshTransformUpdaterSystem" ]
+
+[node name="World" type="Node3D"]
+script = ExtResource( 1 )
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.992862, 0.11927, 0, -0.11927, 0.992862, 0, 7.35529, 34.0268 )
+script = null
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+script = null
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform( 0.799821, -0.22851, -0.55504, 0.595473, 0.418369, 0.685842, 0.0754897, -0.879062, 0.470692, -12.7418, 19.2813, 16.7387 )
+script = null
+
+[node name="WorldECS" type="WorldECS" parent="."]
+system_dispatchers_map = {
+@"PhysicsSystemDispatcher": @"Physics"
+}
+active_pipeline = @"Default"
+resources = PackedStringArray( "FrameTimeResource", "RenderingScenarioResource", "RenderingServerResource", "MessageQueueResource", "EngineResource", "OsResource", "Physics3DServerResource", "Physics3DResource", "MainPhysicsSpace" )
+pipelines/Default = SubResource( 2 )
+script = null

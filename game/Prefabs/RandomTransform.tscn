@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="BoxMesh" id=1]
+size = Vector3( 0.25, 0.25, 0.25 )
+
+[node name="RT" type="Entity"]
+__component_data = {
+@"MeshComponent": {
+@"mesh": SubResource( 1 )
+},
+@"TransformComponent": {
+@"mesh": SubResource( 1 )
+},
+@"RandomTeleport": {
+}
+}
+script = null

@@ -1,0 +1,7 @@
+[submodule "source/godot"]
+	path = source/godot
+	url = https://github.com/godotengine/godot.git
+
+[submodule "source/modules/godex"]
+	path = source/modules/godex
+	url = https://github.com/AndreaCatania/godex.git
