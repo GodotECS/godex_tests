@@ -1,6 +1,6 @@
 # Godex bench test
 
-This repository is used to test the Godex performances.
+This repository is used to test the [Godex](https://github.com/AndreaCatania/godex) performances.
 
 ### Compile the bench test
 To execute this test follow the following instructions.
