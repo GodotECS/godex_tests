@@ -81,7 +81,7 @@ You can tweak the above variables to spawn `Entities` instead of `Nodes`, change
 
 ##### Considerations
 The `Node`s and the `Entities` are doing exactly the same thing, but in different ways (check _modules/test_nodes_and_systems_).
-On my machine the difference between `Node` and `Entities` is just about 30% in favor of `Entities`; however, this just because the _Rendering_ is a bottleneck.
+On my machine the `Godot Node` scene is running around 40FPS while the `Godex` scene is running at 60FPS (around 1.5 the `Godot Node` scene frame rate). However, this just because the _Rendering_ is a bottleneck.
 
 If you really want to compare only the `Node` processing and the `Entity` processing, you have to set the parameter `var no_mesh = false` to `true`.
 In this way will spawn `Node`s / `Entities` without meshes, so the rendering will not run. The performance gain will be order of magnitude more, just give it a check.
