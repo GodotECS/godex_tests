@@ -13,7 +13,7 @@ void random_teleport_system(Query<const RandomTeleport, TransformComponent> p_qu
 	}
 }
 
-void debris_system(const FrameTimeResource *p_frame_time, Query<Debris, TransformComponent> p_query) {
+void debris_system(const FrameTime *p_frame_time, Query<Debris, TransformComponent> p_query) {
 	while (p_query.is_done() == false) {
 		auto [debris, transf] = p_query.get();
 

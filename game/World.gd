@@ -4,7 +4,7 @@ extends Node3D
 func _ready():
 
 	# Spawn ECS entities
-	var godex = false
+	var godex = true
 	# Element to spawn
 	var spawn_count = 10000
 

@@ -3,7 +3,7 @@ extends System
 const speed = 1.0
 
 func _prepare():
-	with_resource("FrameTimeResource", IMMUTABLE)
+	with_databag("FrameTime", IMMUTABLE)
 	with_component("TransformComponent", MUTABLE)
 	with_component("Debris.gd", MUTABLE)
 

@@ -30,6 +30,5 @@ system_dispatchers_map = {
 @"PhysicsSystemDispatcher": @"Physics"
 }
 active_pipeline = @"Default"
-resources = PackedStringArray( "FrameTimeResource", "RenderingScenarioResource", "RenderingServerResource", "MessageQueueResource", "EngineResource", "OsResource", "Physics3DServerResource", "Physics3DResource", "MainPhysicsSpace" )
 pipelines/Default = SubResource( 2 )
 script = null
