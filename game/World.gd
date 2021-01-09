@@ -1,4 +1,3 @@
-## This script is just to test the initial game mechanics.
 extends Node3D
 
 func _ready():
