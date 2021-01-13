@@ -1,13 +1,13 @@
 # Godex bench test
 
-This repository is used to test the [Godex](https://github.com/AndreaCatania/godex) performances.
+This repository is used to test the [Godex](https://github.com/GodotECS/godex) performances.
 
 ### Compile the bench test
 To execute this test follow the following instructions.
 
 ##### 1. Clone this repository:
 ```
-git clone https://github.com/AndreaCatania/godex_tests.git 
+git clone https://github.com/GodotECS/godex_tests.git 
 ```
 
 ##### 2. Clone the submodules
