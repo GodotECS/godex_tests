@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="PrismMesh" id=3]
+
+[node name="Debris" type="Entity"]
+__component_data = {
+@"TransformComponent": {
+@"transform": Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0 ),
+@"mesh": SubResource( 3 )
+},
+@"MeshComponent": {
+@"transform": Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0 ),
+@"mesh": SubResource( 3 )
+},
+@"Debris.gd": {
+@"transform": Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0 ),
+@"mesh": SubResource( 3 )
+}
+}
+script = null

@@ -8,13 +8,13 @@
 #include "core/config/engine.h"
 
 class RandomTeleport : public godex::Component {
-	COMPONENT(RandomTeleport, DenseVector)
+	COMPONENT(RandomTeleport, DenseVectorStorage)
 };
 
 class Debris : public godex::Component {
-	COMPONENT(Debris, DenseVector)
+	COMPONENT(Debris, DenseVectorStorage)
 
-	static void _bind_properties() {
+	static void _bind_methods() {
 		ECS_BIND_PROPERTY(Debris, PropertyInfo(Variant::VECTOR3, "velocity"), velocity);
 	}
 
@@ -22,5 +22,5 @@ public:
 	Vector3 velocity;
 };
 
-void random_teleport_system(Query<const RandomTeleport, TransformComponent> p_query);
-void debris_system(const FrameTime *p_frame_time, Query<Debris, TransformComponent> p_query);
+void random_teleport_system(Query<const RandomTeleport, TransformComponent> &p_query);
+void debris_system(const FrameTime *p_frame_time, Query<Debris, TransformComponent> &p_query);

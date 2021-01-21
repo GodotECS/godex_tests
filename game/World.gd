@@ -43,20 +43,20 @@ func _ready():
 func spawn_entity_debris(velocity: Vector3, position: Vector3, no_mesh: bool):
 	var entity_id
 	if no_mesh:
-		entity_id = WorldECSCommands.create_entity_from_prefab(ECS.get_active_world(), physical_debris_prefab_no_mesh)
+		entity_id = ECS.get_active_world().create_entity_from_prefab(physical_debris_prefab_no_mesh)
 	else:
-		entity_id = WorldECSCommands.create_entity_from_prefab(ECS.get_active_world(), physical_debris_prefab)
+		entity_id = ECS.get_active_world().create_entity_from_prefab(physical_debris_prefab)
 
-	var debris = WorldECSCommands.get_entity_component(ECS.get_active_world(), entity_id, "Debris")
+	var debris = ECS.get_active_world().get_entity_component(entity_id, "Debris")
 	debris.velocity = velocity
-	var trans = WorldECSCommands.get_entity_component(ECS.get_active_world(), entity_id, "TransformComponent")
+	var trans = ECS.get_active_world().get_entity_component(entity_id, "TransformComponent")
 	trans.transform.origin = position
 
 func spawn_entity_random_transform(no_mesh: bool):
 	if no_mesh:
-		WorldECSCommands.create_entity_from_prefab(ECS.get_active_world(), physical_RT_prefab_no_mesh)
+		ECS.get_active_world().create_entity_from_prefab(physical_RT_prefab_no_mesh)
 	else:
-		WorldECSCommands.create_entity_from_prefab(ECS.get_active_world(), physical_RT_prefab)
+		ECS.get_active_world().create_entity_from_prefab(physical_RT_prefab)
 
 
 @onready var physical_RT_node = load("res://Nodes/RandomTransform.tscn")
