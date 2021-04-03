@@ -2,16 +2,15 @@
 #pragma once
 
 #include "../godex/components/component.h"
-#include "../godex/godot/components/transform_component.h"
-#include "../godex/godot/databags/godot_engine_databags.h"
-#include "../godex/systems/system.h"
-#include "core/config/engine.h"
+#include "../godex/storage/dense_vector_storage.h"
+#include "../godex/modules/godot/components/transform_component.h"
+#include "../godex/modules/godot/databags/godot_engine_databags.h"
 
-class RandomTeleport : public godex::Component {
+struct RandomTeleport {
 	COMPONENT(RandomTeleport, DenseVectorStorage)
 };
 
-class Debris : public godex::Component {
+struct Debris {
 	COMPONENT(Debris, DenseVectorStorage)
 
 	static void _bind_methods() {
